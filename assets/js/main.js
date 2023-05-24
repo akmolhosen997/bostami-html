@@ -4,7 +4,7 @@
 // meanmenu
 $('.main_menu').meanmenu({
 	meanMenuContainer: '.mobile_menu',
-	meanScreenWidth: "1299"
+	meanScreenWidth: "1399"
 });
 
 $(window).on('scroll', function () {
