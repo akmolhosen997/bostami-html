@@ -35,6 +35,20 @@ let mobilemenu = document.querySelector(".mobile_menu");
 		mobilemenu.classList.toggle('active')
 	}
 
+
+let darktoggle = document.querySelector(".dark-btn-icon");
+
+darktoggle.onclick = function() {
+	document.body.classList.toggle("dark-theme");
+
+	if(document.body.classList.contains("dark-theme")) {
+		darktoggle.src = "assets/img/icon/mon-icon.png";
+	}else {
+		darktoggle.src = "assets/img/icon/sun-icon.png";
+	}
+}
+
+
 //  client
 
 if (jQuery(".client_slide_active").length > 0) {

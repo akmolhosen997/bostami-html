@@ -7,29 +7,9 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
 
-.page-wrapper {
-  height: 100vh;
-  width: 100vw;
-  display: block;
-  background-position: center center;
-  background-size: cover;
-  position: fixed;
-  overflow-X: hidden;
-  overflow-y: auto;
-  padding-top: 240px;
-    padding-bottom: 120px;
-    @media #{$xl} {
-      padding-top: 120px;
-    }
-    @media #{$lg,$md,$xs} {
-      padding-top: 120px;
-    }
-}
-
-
 // header
 .bostami-header-wrap {
-  background: var(--common-white);
+  background: var(--light-white);
   padding: 20px;
   border-radius: 12px;
 }
@@ -84,7 +64,20 @@
   transform: translateX(30px);
 }
 
-
+.dark-btn {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  line-height: 23px;
+  text-align: center;
+  background-color: var(--common-white);
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+  &:hover {
+    background-color: var(--theme-secondary);
+  }
+}
 
 // mobile menu
 .mobile-menu-wrap {
@@ -143,6 +136,25 @@
   transform: scaleY(1);
 }
  
+.page-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  background-position: center center;
+  background-size: cover;
+  position: fixed;
+  overflow-X: hidden;
+  overflow-y: auto;
+  padding-top: 240px;
+    padding-bottom: 120px;
+    @media #{$xl} {
+      padding-top: 120px;
+    }
+    @media #{$lg,$md,$xs} {
+      padding-top: 120px;
+    }
+}
+
 // parsonal info
 
 .bostami-parsonal-info {
@@ -153,6 +165,8 @@
     text-align: center;
     padding: 40px 30px;
     margin-left: -100px;
+    position: sticky;
+    top: -100px;
     @media #{$xxl} {
       width: 340px;
       margin-left: -40px;
@@ -324,36 +338,7 @@
   }
 }
 
-
-// page title
-.bostami-page-title-wrap {
-  padding-top: 60px;
-  padding-left: 60px;
-  padding-right: 60px;
-  @media #{$xs} {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  @media #{$sm} {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-  p {
-    max-width: 632px;
-  }
-}
-
-// section title
-.bostami-section-title-wrap {
-  .section-title {
-    margin-bottom: 0;
-    @media #{$xl,$lg,md,$xs} {
-      font-size: 24px;
-    }
-  }
-}
-
-// page css
+// page 
 .bostami-page-content-wrap {
   background-color: var(--common-white);
   border-radius: 20px;
@@ -382,81 +367,46 @@
     border-radius: 5px;
     margin-bottom: 30px;
     @media #{$xs} {
+      width: 70%;
+    }
+    @media #{$sm} {
       width: 100%;
     }
   }
 }
 
-// about page  
-
-.bostami-what-do-wrap  {
+// page title
+.bostami-page-title-wrap {
+  padding-top: 60px;
   padding-left: 60px;
   padding-right: 60px;
   @media #{$xs} {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   @media #{$sm} {
     padding-left: 60px;
     padding-right: 60px;
   }
+  p {
+    max-width: 632px;
+  }
 }
-.bostami-what-do {
 
-  &-item {
-    border-radius: 12px;
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-    @media #{$xs} {
-      flex-wrap: wrap;
+// section title
+.bostami-section-title-wrap {
+  .section-title {
+    margin-bottom: 0;
+    img {
+      margin-right: 6px;
+      margin-top: -5px;
     }
-    @media #{$sm} {
-      flex-wrap: nowrap;
-    }
-    .text {
-      .title {
-        font-weight: 500;
-        margin-bottom: 10px;
-        @media #{$xl,lg,$md} {
-          font-size: 22px;
-        }
-        @media #{$xs} {
-          font-size: 22px;
-        }
-        @media #{$sm} {
-          font-size: 24px;
-        }
-      }  
-      p {
-        margin-bottom: 0;
-        line-height: 30px;
-      }
+    @media #{$xl,$lg,md,$xs} {
+      font-size: 24px;
     }
   }
 }
 
-.bostami-client {
-  padding-top: 40px;
-  padding-bottom: 70px;
-  background-color: var(--light-white-2);
-  &-slider-logo {
-    padding: 0px 15px;
-  }
-}
-
-.bostami-main-menu-wrap {
-  width: 144px;
-  background: white;
-  border-radius: 16px;
-  padding: 30px;
-  @media #{$xxl} {
-    width: 120px;
-    padding: 18px;
-  }
-}
 // main menu 
 .bastami-main-menu {
   ul {
