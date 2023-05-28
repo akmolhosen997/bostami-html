@@ -2,18 +2,6 @@
 @use '../abstracts/variables' as *;
 
 
-.bostami-what-do-wrap  {
-    padding-left: 60px;
-    padding-right: 60px;
-    @media #{$xs} {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    @media #{$sm} {
-      padding-left: 60px;
-      padding-right: 60px;
-    }
-  }
   
   .bostami-what-do {
   

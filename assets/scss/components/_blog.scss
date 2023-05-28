@@ -1,0 +1,67 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.blog-slider-single {
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    .img {
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 18px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .blog-meta {
+        span {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin-right: 5px;
+        }
+        .blog-cetagory {
+            position: relative;
+            padding-left: 12px;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: var(--body-text);
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .blog-title {
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: capitalize;
+        &:hover {
+            color: var(--theme-primary);
+        }
+    }
+}
+
+.blog-slider-wrap {
+    .blog-progation {
+        text-align: center;
+        span {
+            width: 12px;
+            height: 12px;
+            background-color: transparent;
+            border: 3px solid var(--theme-primary) !important;
+            margin: 0px 5px !important;
+
+            &:is(.swiper-pagination-bullet-active) {
+                background-color: var(--theme-primary);
+            }
+        }
+    }
+}

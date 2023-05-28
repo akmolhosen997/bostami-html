@@ -44,7 +44,6 @@
   border-radius: 2px;
   transition: .5s;
 }
-
 .menu-btn span:nth-child(1) {
   transform: translateY(-5px);
 }
@@ -62,21 +61,6 @@
 }
 .menu-btn.active span:nth-child(3) {
   transform: translateX(30px);
-}
-
-.dark-btn {
-  display: inline-block;
-  width: 26px;
-  height: 26px;
-  line-height: 23px;
-  text-align: center;
-  background-color: var(--common-white);
-  border-radius: 50%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-  margin-right: 10px;
-  &:hover {
-    background-color: var(--theme-secondary);
-  }
 }
 
 // mobile menu
@@ -125,6 +109,16 @@
                 }
               }
             }
+            &:is(.active) {
+              a {
+                color: var(--theme-secondary);
+                span {
+                  svg * {
+                    fill: var(--theme-secondary);
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -136,277 +130,6 @@
   transform: scaleY(1);
 }
  
-.page-wrapper {
-  height: 100vh;
-  width: 100vw;
-  display: block;
-  background-position: center center;
-  background-size: cover;
-  position: fixed;
-  overflow-X: hidden;
-  overflow-y: auto;
-  padding-top: 240px;
-    padding-bottom: 120px;
-    @media #{$xl} {
-      padding-top: 120px;
-    }
-    @media #{$lg,$md,$xs} {
-      padding-top: 120px;
-    }
-}
-
-// parsonal info
-
-.bostami-parsonal-info {
-  &-area {
-    width: 400px;
-    border-radius: 20px;
-    background-color: var(--common-white);
-    text-align: center;
-    padding: 40px 30px;
-    margin-left: -100px;
-    position: sticky;
-    top: -100px;
-    @media #{$xxl} {
-      width: 340px;
-      margin-left: -40px;
-    }
-    @media #{$xl} {
-      width: 100%;
-      margin-left: 0px;
-      padding: 30px 15px;
-    }
-    @media #{$lg,$md} {
-      width: 100%;
-      margin-left: 0px;
-      margin-bottom: 30px;
-    }
-    @media #{$xs} {
-      width: 100%;
-      margin-left: 0px;
-      margin-bottom: 30px;
-      padding: 40px 20px;
-    }
-    @media #{$sm} {
-      padding: 40px 30px;
-    }
-  }
-  &-img {
-    width: 240px;
-    height: 240px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin: auto;
-    margin-bottom: 21px;
-    margin-top: -180px;
-    @media #{$xl} {
-      width: 210px;
-      height: 210px;
-      margin-top: 0px;
-    }
-    @media #{$lg,$md,$xs} {
-      margin-top: 0px;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  &-name {
-    font-size: 26px;
-    text-transform: capitalize;
-    font-weight: 500;
-    color: var(--common-black);
-    font-family: $roboto;
-    margin-bottom: 17px;
-    @media #{$xl} {
-      font-size: 20px;
-    }
-    @media #{$md,$xs} {
-      font-size: 22px;
-    }
-  }
-  &-bio {
-    font-size: 16px;
-    display: inline-block;
-    font-weight: 500;
-    text-transform: capitalize;
-    color: var(--common-black);
-    font-family: $poppins;
-    background-color: var(--light-white);
-    border-radius: 5px;
-    padding: 4px 20px;
-    @media #{$xl,$md,$xs} {
-      font-size: 14px;
-    }
-  }
-  &-social-link {
-    li {
-      display: inline-block;
-      margin: 0 4px;
-      a {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
-        background-color: var(--light-white);
-        text-align: center;
-        line-height: 40px;
-        &:hover {
-          background-color: var(--theme-primary);
-          svg * {
-            fill: var(--common-white);
-          }
-        }
-      }
-    }
-  }
-  &-contact {
-    background-color: var(--light-white);
-    border-radius: 16px;
-    text-align: left;
-    padding: 20px 30px;
-    @media #{$xl} {
-      padding: 20px 15px;
-    }
-    @media #{$xs} {
-      padding: 20px 15px;
-    }
-    @media #{$sm} {
-      padding: 20px 30px;
-    }
-    &-item {
-      display: flex;
-      align-items: center;
-      
-      gap: 10px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      &:not(:first-child) {
-        border-top: 1px solid #E3E3E3;
-      }
-      .icon {
-        flex: 0 0 auto;
-        display: inline-block;
-        width: 44px;
-        height: 44px;
-        background-color: var(--common-white);
-        border-radius: 8px;
-        text-align: center;
-        line-height: 44px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
-        transition: .3s;
-        @media #{$xl} {
-          width: 35px;
-          height: 35px;
-          line-height: 35px;
-        }
-        svg * {
-          transition: .3s;
-        }
-        &:hover {
-          background-color: var(--theme-primary);
-          svg * {
-            fill: var(--common-white);
-          }
-        }
-      }
-      .text {
-        display: inline-block;
-        span {
-          display: block;
-          font-size: 12px;
-          line-height: 18px;
-          text-transform: capitalize;
-          font-weight: 400;
-          margin-bottom: 3px;
-        }
-        p {
-          font-size: 16px;
-          line-height: 24px;
-          font-weight: 400;
-          color: var(--common-black);
-          text-transform: capitalize;
-          margin-bottom: 0;
-          @media #{$xl} {
-            font-size: 14px;
-          }
-        }
-      }
-    }
-  }
-}
-
-// page 
-.bostami-page-content-wrap {
-  background-color: var(--common-white);
-  border-radius: 20px;
-}
-.page-title {
-  position: relative;
-  display: inline-block;
-  @media #{$xl,lg,$md} {
-    font-size: 36px;
-  }
-  @media #{$xs} {
-    font-size: 32px;
-  }
-  @media #{$sm} {
-    font-size: 34px;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 3px;
-    background-color: var(--theme-primary);
-    left: 122%;
-    top: 50%;
-    transform: translatey(-50%);
-    border-radius: 5px;
-    margin-bottom: 30px;
-    @media #{$xs} {
-      width: 70%;
-    }
-    @media #{$sm} {
-      width: 100%;
-    }
-  }
-}
-
-// page title
-.bostami-page-title-wrap {
-  padding-top: 60px;
-  padding-left: 60px;
-  padding-right: 60px;
-  @media #{$xs} {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  @media #{$sm} {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-  p {
-    max-width: 632px;
-  }
-}
-
-// section title
-.bostami-section-title-wrap {
-  .section-title {
-    margin-bottom: 0;
-    img {
-      margin-right: 6px;
-      margin-top: -5px;
-    }
-    @media #{$xl,$lg,md,$xs} {
-      font-size: 24px;
-    }
-  }
-}
-
 // main menu 
 .bastami-main-menu {
   ul {
@@ -432,6 +155,18 @@
         span {
           display: block;
           margin-bottom: 12px;
+        }
+        
+      }
+      &:is(.active) {
+        background-color: var(--theme-primary);
+        a {
+          color: var(--common-white);
+          span {
+            svg * {
+              fill: var(--common-white);
+            }
+          }
         }
       }
       &:hover {

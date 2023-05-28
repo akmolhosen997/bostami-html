@@ -258,6 +258,10 @@ input:focus::placeholder, textarea:focus::placeholder {
     background-color: var(--prink);
 }
 
+.bg-light-white-2 {
+    background-color: var(--light-white-2);
+}
+
 .bg-default {
     background-size: cover;
     background-position: center center;

@@ -49,7 +49,7 @@ darktoggle.onclick = function() {
 }
 
 
-//  client
+//  client slider
 
 if (jQuery(".client_slide_active").length > 0) {
 	let acooterbrand = new Swiper('.client_slide_active', {
@@ -85,85 +85,60 @@ if (jQuery(".client_slide_active").length > 0) {
 });}
 
 
+// work fillter
+function enableMasonry2  () {
+	// ----------------------------- isotop gallery
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function sliderActive() {
-	/*------------------------------------
-	Slider
-	--------------------------------------*/
-	if (jQuery(".banner_1_slider_active").length > 0) {
-		let sliderActive1 = '.banner_1_slider_active';
-		let sliderInit1 = new Swiper(sliderActive1, {
-			// Optional parameters
-			slidesPerView: 1,
-			rtl: false,
-			slidesPerColumn: 1,
-			paginationClickable: true,
-			loop: true,
-
-			autoplay: {
-				delay: 500000,
-			},
-
-			// If we need pagination
-	        pagination: {
-				el: ".banner_1_slider_pagination",
-				clickable: true,
-			},
-
-			// Navigation arrows
-			navigation: {
-				nextEl: '.slider-swiper-next',
-				prevEl: '.slider-swiper-prev',
-			},
-
-			a11y: false
+	$(window).on("load", function () {
+	  if ($("#fillter-item-active").length) {
+		var $grid = $("#fillter-item-active").isotope({
+		  // options
+		  itemSelector: ".isotop-item",
+		  percentPosition: true,
+		  masonry: {
+			// use element for option
+			columnWidth: ".grid-sizer",
+		  },
 		});
 
-		function animated_swiper(selector, init) {
-			let animated = function animated() {
-				$(selector + ' [data-animation]').each(function () {
-					let anim = $(this).data('animation');
-					let delay = $(this).data('delay');
-					let duration = $(this).data('duration');
+		// filter items on button click
+		$(".isotop-menu-wrapper").on("click", "li", function () {
+		  var filterValue = $(this).attr("data-filter");
+		  $grid.isotope({ filter: filterValue });
+		});
 
-					$(this).removeClass('anim' + anim)
-						.addClass(anim + ' animated')
-						.css({
-							webkitAnimationDelay: delay,
-							animationDelay: delay,
-							webkitAnimationDuration: duration,
-							animationDuration: duration
-						})
-						.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-							$(this).removeClass(anim + ' animated');
-						});
-				});
-			};
-			animated();
-			// Make animated when slide change
-			init.on('slideChange', function () {
-				$(sliderActive1 + ' [data-animation]').removeClass('animated');
-			});
-			init.on('slideChange', animated);
-		}
+		// change is-checked class on buttons
+		$(".isotop-menu-wrapper").each(function (i, buttonGroup) {
+		  var $buttonGroup = $(buttonGroup);
+		  $buttonGroup.on("click", "li", function () {
+			$buttonGroup.find(".is-checked").removeClass("is-checked");
+			$(this).addClass("is-checked");
+		  });
+		});
+	  }
+	});
+}
 
-		animated_swiper(sliderActive1, sliderInit1);
-	}}
+enableMasonry2();
+
+// blog slider
+if (jQuery(".blog-slider-active").length > 0) {
+	let acooterbrand = new Swiper('.blog-slider-active', {
+		slidesPerView: 1,
+		loop: true,
+		rtl: false,
+		infinite: true,
+		autoplay: false,
+		pagination: {
+			el: ".blog-progation",
+			clickable: true,
+			},
+
+});}
+
+
+
+
 
 /* magnificPopup img view */
 $('.popup-image').magnificPopup({
@@ -210,161 +185,23 @@ $.scrollUp({
 	activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
 });
 
-// testimonial active thumb slider
-var testimonialControl = new Swiper(".sg-testimonial-active-control", {
-	loop: true,
-	spaceBetween: 0,
-	slidesPerView: 1,
-	freeMode: true,
-	autoplay: true,
-	watchSlidesProgress: true,
-});
-
-var testimonialControlMain = new Swiper(".sg-testimonial-active-main", {
-	loop: true,
-	spaceBetween: 0,
-	navigation: {
-		nextEl: ".sg-testimonial-next",
-		prevEl: ".sg-testimonial-prev",
-	},
-	thumbs: {
-		swiper: testimonialControl,
-	},
-});
-
-
-// brand active 
-const brandActive = new Swiper(".brand-active", {
-	slidesPerView: 5,
-	spaceBetween: 30,
-	centeredSlides: true,
-	loop: true,
-	navigation: {
-		nextEl: ".sg-portfolio-prev",
-		prevEl: ".sg-portfolio-next",
-		},
-		breakpoints: {
-		0: {
-			slidesPerView: 1,
-			},
-		576: {
-			slidesPerView: 1,
-		},
-		768: {
-			slidesPerView: 2,
-		},
-		992: {
-			slidesPerView: 3,
-		},
-		1199: {
-			slidesPerView: 5
-		}
-	}
-});
-
-// team active 
-const teamActive = new Swiper(".team-active", {
-	slidesPerView: 2,
-	spaceBetween: 30,
-	loop: true,
-	speed: 2000,
-	autoplay: {
-		delay: 3000,
-	},
-	navigation: {
-		nextEl: ".sg-portfolio-prev",
-		prevEl: ".sg-portfolio-next",
-		},
-		breakpoints: {
-		0: {
-			slidesPerView: 1,
-			},
-		576: {
-			slidesPerView: 2,
-		},
-		768: {
-			slidesPerView: 2,
-		},
-		992: {
-			slidesPerView: 2,
-		},
-		1200: {
-			slidesPerView: 2
-		}
-	}
-});
-
-// portfolio active another thumb active
-const portfolioActive = new Swiper('.portfolio-active', {
-	spaceBetween: 10,
-	loop: true,
-	loop: true,
-	loopedSlides: 5,
-	slidesPerView: 1,
-	breakpoints: {
-		0: {
-			slidesPerView: 1,
-			},
-		576: {
-			slidesPerView: 1,
-		},
-		768: {
-			slidesPerView: 1,
-		},
-		992: {
-			slidesPerView: 1,
-		},
-		1199: {
-			slidesPerView: 1
-		}
-	}
-});
-const portfolioThumbs = new Swiper('.portfolio-thumbs', {
-	centeredSlides: true,
-	slidesPerView: 'auto',
-	touchRatio: 0.2,
-	slideToClickedSlide: true,
-	loop: true,
-	slidesPerView: 5,
-	navigation: {
-		nextEl: '.portfolio-swiper-next',
-		prevEl: '.portfolio-swiper-prev',
-	},
-	breakpoints: {
-		0: {
-			slidesPerView: 1,
-			},
-		576: {
-			slidesPerView: 1,
-		},
-		768: {
-			slidesPerView: 3,
-		},
-		992: {
-			slidesPerView: 3,
-		},
-		1200: {
-			slidesPerView: 5
-		}
-	}
-});
-portfolioActive.controller.control = portfolioThumbs;
-portfolioThumbs.controller.control = portfolioActive;
 
 
 //   odometer
-$('.about_count').appear(function (e) {
-	var odo = $(".about_count");
+$('.odometer').appear(function (e) {
+	var odo = $(".odometer");
 	odo.each(function () {
 		var countNumber = $(this).attr("data-count");
 		$(this).html(countNumber);
 	});
 });
 
+
 // WOW active
 new WOW().init();
 
-sliderActive();
+
+
 
 // product quantity in cart
 var productQuantity = 1;
