@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.mb-70 {
+    margin-bottom: 70px;
+}
+.bg-black {
+    background-color: #000000;
+}
+.bg-gray {
+    background-color: #111111;
+}
+.text-center {
+    text-align: center;
+}
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.hero-content-wrap {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.site-logo {
+    display: block;
+    flex: 0 0 auto;
+    margin-bottom: 70px;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    transition: .3s;
+    margin-right: 30px;
+}
+.btn:hover {
+    border-color: #FA5252;
+    color: #FA5252;
+    background: transparent;
+}
+
+.btn-1 {
+    background: linear-gradient(97deg, rgba(250,82,82,1) 0%, rgba(221,36,118,1) 100%);
+}
+
+.btn-2 {
+    background: #1B74E4;
+}
+
+.title {
+    margin-bottom: 55px;
+    font-weight: 500;
+    color: #FA5252;
+
+}
+
+.main-title {
+    font-size: 45px;
+    text-transform: capitalize;
+    color: #FA5252;
+}
+.bg-shape {
+    margin-bottom: 30px;
+}
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #DDDDDD;
+    margin-bottom: 20px;
+}
+.section-pera {
+    font-size: 16px;
+    font-weight: 500;
+    color: #DDDDDD;
+}
+.demo-link {
+    width: 310px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 30px;
+    border: 3px solid #44566C;
+    height: 319px;
+    position: relative;
+    margin: 0 30px;
+}
+.demo-link:hover .demo-title {
+    background: linear-gradient(97deg, rgba(250,82,82,1) 0%, rgba(221,36,118,1) 100%);
+}
+.demo-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.demo-title {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    background: #44566C;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+    transition: .3s;
+}
+
+.home-demo-area {
+    padding-top: 110px;
+    padding-bottom: 120px;
+}
+.feature-item-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.feature-item {
+    display: inline-block;
+    width: 30.33%;
+    background: #1E293B;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.feature-icon {
+    display: inline-block;
+    width: 90px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 10px solid #44566C;
+    margin-bottom: 15px;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-title {
+    font-size: 26px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.feature-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #A6A6A6;
+}
+
+.buy-title {
+    color: #fff;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.buy-title span {
+    display: inline-block;
+    color: #FA5252;
+    text-transform: uppercase;
+}
+
+.copy-right *{
+    font-size: 16px;
+    font-weight: 500;
+    background: #1E293B;
+    color: #fff;
+}
+.copy-right span {
+    display: block;
+    padding: 20px 10px;
+}
+.copy-right a {
+   padding: 0;
+   transition: .3s;
+}
+.copy-right a:hover {
+    color: #FA5252;
+}
+
+
+
+
+@media (max-width: 767px) {
+    .feature-item {
+        width: 100%;
+    }
+    .title {
+        font-size: 26px;
+    }
+    .btn {
+
+        margin-bottom: 30px;
+    }
+    .hero-btn-wrap {
+        text-align: center;
+    }
+    .title {
+        font-size: 30px;
+        text-align: center;
+    }
+    .bg-shape {
+        width: 170px;
+    }
+    .demo-link {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 30;
+    }
+    .buy-title {
+        font-size: 32px;
+    }
+  }
+
+
+@media (min-width: 768px) {
+    .feature-item {
+        width: 45.33%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .feature-item {
+        width: 29.33%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .feature-item {
+        width: 30.33%;
+    }
+  }

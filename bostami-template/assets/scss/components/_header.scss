@@ -1,0 +1,283 @@
+/*
+************
+*************************
+03. back to top
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+// header
+.bostami-header-wrap {
+  background: var(--light-white);
+  padding: 20px;
+  border-radius: 12px;
+}
+.bostami-header-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  .menu-btn {
+    position: relative;
+    display: inline-flex;
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(180deg, #FA5252 0%, #E12A72 100%);
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 1s;
+    overflow: hidden;
+    &:hover {
+      background: linear-gradient(180deg, #1B74E4 0%, #1B74E4 100%) ;
+    }
+  }  
+}
+
+.menu-btn span {
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background-color: var(--common-white);
+  border-radius: 2px;
+  transition: .5s;
+}
+.menu-btn span:nth-child(1) {
+  transform: translateY(-5px);
+}
+.menu-btn span:nth-child(2) {
+  transform: translateY(5px);
+}
+.menu-btn.active {
+  background: linear-gradient(180deg, #1B74E4 0%, #1B74E4 100%) ;
+}
+.menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.menu-btn.active span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.menu-btn.active span:nth-child(3) {
+  transform: translateX(30px);
+}
+
+// mobile menu
+.mobile-menu-wrap {
+  position: relative;
+  .mobile-menu  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    z-index: 5;
+    transition: .5s;
+    .mean-bar {
+      background-color: var(--common-white);
+      border-radius: 12px;
+      box-shadow: 0px 6px 6px rgba(238, 238, 238, 0.2);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      .mean-nav {
+        margin-top: 0;
+        background-color: var(--common-white);
+        ul {
+          li {
+            a {
+              border: none;
+              font-size: 13px;
+              text-transform: capitalize;
+              font-weight: 500;
+              color: var(--body-text);
+              padding: 5px 70px;
+              @media #{$xs} {
+                padding: 5px 0px;
+              }
+              span {
+                display: inline-block;
+                svg {
+                  width: 16px !important;
+                  margin-right: 8px;
+                }
+              }
+              &:hover {
+                color: var(--theme-secondary);
+                span {
+                  svg * {
+                    fill: var(--theme-secondary);
+                  }
+                }
+              }
+            }
+            @media #{$xs} {
+              padding: 0px 40px;
+            }
+            &:is(.active) {
+              a {
+                color: var(--theme-secondary);
+                span {
+                  svg * {
+                    fill: var(--theme-secondary);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-menu.active {
+  transform: scaleY(1);
+}
+ 
+// main menu 
+.bastami-main-menu {
+  ul {
+    li {
+      background-color: var(--light-white);
+      border-radius: 12px;
+      width: 84px;
+      height: 84px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: .3s;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      a {
+        display: block;
+        font-size: 13px;
+        text-transform: capitalize;
+        font-weight: 500;
+        line-height: 1;
+        span {
+          display: block;
+          margin-bottom: 12px;
+        }
+        
+      }
+      &:is(.active) {
+        background-color: var(--theme-primary);
+        a {
+          color: var(--common-white);
+          span {
+            svg * {
+              fill: var(--common-white);
+            }
+          }
+        }
+      }
+      &:hover {
+        background-color: var(--theme-primary);
+        a {
+          color: var(--common-white);
+          span {
+            svg * {
+              fill: var(--common-white);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.header-right-flex {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.main-style-2 {
+  background-color: transparent;
+  .bostami-main-menu-wrap  {
+    width: unset;
+    background: transparent;
+    border-radius: 0px;
+    padding: 0;
+    position: unset;
+    top: unset;
+    display: inline-block;
+    .bastami-main-menu {
+      display: inline-block;
+      ul {
+        display: inline-block;
+        li {            
+          display: inline-block;
+          background-color: var(--light-white);
+          border-radius: 8px;
+          width: unset;
+          height: unset;
+          text-align: unset;
+          transition: 0.3s;
+          margin-bottom: 0;
+          &:not(:first-child) {
+            margin-left: 18px;
+            @media #{$lg} {
+              margin-left: 5px;
+            }
+          }
+          a {
+            background: #fff ;
+            border-radius: 8px;
+            padding: 0px 16px;
+            transition: 0.3s;
+            height: 45px;
+            line-height: 45px;
+            @media #{$lg} {
+              padding: 0px 10px;
+            }
+            &:hover {
+              background: rgb(250,82,82);
+              background: linear-gradient(97deg, rgba(250,82,82,1) 0%, rgba(221,36,118,1) 100%);
+            }
+            span {
+              display: inline-block;
+              margin-bottom: 0;
+            }
+
+          }
+          &:is(.active) {
+            a {
+              background: rgb(250,82,82);
+              background: linear-gradient(97deg, rgba(250,82,82,1) 0%, rgba(221,36,118,1) 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.bostami-header-logo {
+  flex: 0 0 auto;
+}
+.menu-btn.menu-btn-2 {
+  width: 45px;
+  height: 45px;
+  margin-left: 20px;
+  @media #{$md,$xs} {
+    margin-bottom: -8px;
+  }
+}
+
+.page-wrapper.page-wrapper-2 {
+  .bostami-header-logo {
+    .site-logo {
+      img {
+        width: 150px;
+        @media #{$xs} {
+          width: 110px;
+        }
+        @media #{$sm} {
+          width: 150px;
+        }
+      }
+    }
+  }
+}

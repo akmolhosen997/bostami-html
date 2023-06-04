@@ -1,0 +1,111 @@
+/*
+************
+*************************
+03. button
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+// default theme btn 
+.btn-1 {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--common-white);
+    background-color: var(--theme-primary);
+    line-height: 27px;
+    padding: 14px 30px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    .icon {
+        display: inline-block;
+        margin-right: 5px;
+        svg * {
+            transition: .3s;
+        }
+    }
+    &:hover {
+        background-color: var(--light-white);
+        border: 1px solid var(--theme-primary);
+        color: var(--common-black);
+        .icon {
+            svg * {
+                fill: var(--common-black);
+            }
+        }
+    }
+}
+.btn-2 {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--common-white);
+    background: linear-gradient(97deg, rgba(250,82,82,1) 0%, rgba(221,36,118,1) 100%);
+    line-height: 27px;
+    padding: 14px 30px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    .icon {
+        display: inline-block;
+        margin-right: 5px;
+        svg * {
+            transition: .3s;
+        }
+    }
+    &:hover {
+        background-color: var(--light-white);
+        border: 1px solid linear-gradient(97deg, rgba(250,82,82,1) 0%, rgba(221,36,118,1) 100%);
+        color: var(--common-black);
+        .icon {
+            svg * {
+                fill: var(--common-black);
+            }
+        }
+    }
+}
+// dark btn
+.dark-btn {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 23px;
+    text-align: center;
+    background-color: var(--common-white);
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    &:hover {
+      background-color: var(--theme-secondary);
+    }
+  }
+  .dark-btn.dark-btn-2 {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 0;
+    .dark-btn-icon {
+        width: 22px;
+    }
+}
+  
+// form btn
+
+.form-btn {
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    text-transform: capitalize;
+    color: #1A1A1A;
+    height: 50px;
+    width: 133px;
+    border: 1px solid #44566C;
+    border-radius: 12px;
+    background-color: var(--light-white-2);
+    &:hover {
+        background-color: var(--theme-primary);
+        border-color: var(--theme-primary);
+    }
+}

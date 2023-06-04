@@ -1,0 +1,124 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.bostami-card-wrap {
+    @media #{$md,$xs} {
+        margin-bottom: 50px;
+    }
+}
+.bostami-card-item {
+    padding: 20px;
+    border-radius: 12px;
+    padding-top: 25px;
+    .card-subtitle {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 9px;
+    }
+    .card-title {
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--heading-black);
+        margin-bottom: 4px;
+        span {
+            color: var(--body-text);
+        }
+    }
+    .card-text {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+}
+.skill-bar {
+    &-item {
+        .title-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 7px;
+            .title {
+                font-size: 16px;
+                font-weight: 400;
+                color: var(--body-text);
+                margin-bottom: 0;
+            }
+            .count {
+                display: block;
+                font-size: 16px;
+                font-weight: 400;
+                color: var(--body-text);
+            }
+        }
+    }
+}
+.skill-section {
+    background-color: var(--light-white-2);
+}
+.skill-bar-wrap {
+    @media #{$md,$xs} {
+        margin-bottom: 50px;
+    }
+}
+.progress-bar-wrap {
+    height: 6px;
+    background: #EDF2F2;
+    border-radius: 6px;
+    overflow: inherit;
+}
+.progress-line {
+    height: 100%;
+    border-radius: inherit;
+}
+.progress-bg-1{
+    background-color: #FF6464;
+}
+.progress-bg-2{
+    background-color: #9272D4;
+}
+.progress-bg-3{
+    background-color: #5185D4;
+}
+.progress-bg-4 {
+    background-color: #CA56F2;
+}
+.knowledeges-item-wrap {
+    .gk-item {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        background: #EDF2F2;
+        border-radius: 8px;
+        padding: 5px 20px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+}
+.bostami-resume-page {
+    @media #{$xs} {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @media #{$sm} {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+.section-wrap {
+    @media #{$xs} {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @media #{$sm} {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+.page-wrapper-2 {
+    .border-redius-20 {
+        border-radius: 20px;
+    }
+}

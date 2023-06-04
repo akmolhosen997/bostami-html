@@ -1,0 +1,153 @@
+
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.dark-theme .overly {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: .5;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+.dark-theme {
+    .page-wrapper {
+
+        // background-color
+        .bostami-header-wrap ,
+        .bostami-parsonal-info-area,
+        .bostami-main-menu-wrap
+        {
+            background-color: #000;
+        }
+
+        .mobile-menu-wrap .mobile_menu .mean-bar ,
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ,
+        .bostami-parsonal-info-contact ,
+        .bostami-parsonal-info-bio ,
+        .bostami-parsonal-info-social-link li a ,
+        .main-style-2 .bostami-main-menu-wrap .bastami-main-menu ul li a
+        {
+            background-color: #1D1D1D;
+        }
+
+        .bg-light-white-2  ,
+        .blog-slider-single ,
+        .fillter-item 
+        {
+            background-color: #0D0D0D;
+        }
+
+        // main-menu dark mood
+        .knowledeges-item-wrap .gk-item {
+            background-color: #1C1C1C;
+        }
+        .bastami-main-menu ul li ,
+        .bostami-contact-item
+        {
+            background-color: #212425;
+        }
+        .bastami-main-menu ul li.active a {
+            color: #fff;
+        }
+        .bastami-main-menu ul li.active{
+            background-color: #1B74E4;
+        }
+        .bastami-main-menu ul li:hover a {
+            color: #fff;
+        }
+        .bastami-main-menu ul li:hover {
+            background-color: #1B74E4;
+        }
+        
+        // ------------------------------------------------------
+
+        // bg transparent
+        .bostami-what-do-item ,
+        .bostami-card-item ,
+        .form-btn ,
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li a 
+        {
+            background-color: transparent;
+        }
+
+        // bg-hover color
+        .bostami-parsonal-info-social-link li a:hover {
+            background-color: #1B74E4;
+        }
+        .btn-1:hover {
+            background-color: #1D1D1D;
+        }
+
+
+        // font-color
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li a ,
+        .btn-1 ,
+        .bostami-card-item .card-title ,
+        .form-btn
+        {
+            color: #fff;
+        }
+
+        .bostami-parsonal-info-bio ,
+        .bostami-contact-item .text span
+        {
+            color: #A6A6A6;
+        }
+
+        // ---------------------------------------------------------
+
+
+        // hover color 
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li a:hover {
+            color: #FA5252;
+        }
+
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li.active a {
+            color: #FA5252;
+        }
+
+        // svg color 
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li a span svg * {
+            fill: #fff;
+        }
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li:hover a span svg * {
+            fill: #FA5252;
+        }
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li.active a span svg * {
+            fill: #FA5252;
+        }
+
+        // border 
+        .bostami-what-do-item ,
+        .bostami-card-item ,
+        .blog-slider-single ,
+        .fillter-item 
+        {
+            border: 1px solid #212425;
+        }
+        
+
+    }
+    .page-wrapper-2 {
+        .bostami-page-area .bostami-page-wrap {
+            background: #000;
+        }
+        .bostami-header-wrap.main-style-2 {
+            background-color: transparent;
+        }
+        .bostami-main-menu-wrap {
+            background: transparent;
+        }
+        .bostami-parsonal-info-area.bostami-parsonal-info-2-area {
+            background: transparent;
+        }
+        .bostami-page-area .bostami-parsonal-info-contact {
+            background-color: transparent;
+        }
+    }
+}
