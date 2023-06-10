@@ -61,3 +61,16 @@
     }
   }
 }
+
+.home-3 {
+  .bostami-what-do-item {
+    @media #{$lg} {
+      flex-wrap: wrap;
+    }
+  }
+  .bostami-what-do-item .text .title {
+    @media #{$lg} {
+      font-size: 20px;
+    }
+  }
+}

@@ -12,6 +12,12 @@ $('.main_menu_2').meanmenu({
 	meanScreenWidth: "991"
 });
 
+$('.main_menu_3').meanmenu({
+	meanMenuContainer: '.mobile_menu_3',
+	meanScreenWidth: "991"
+});
+
+
 
 let menutoggole = document.querySelector(".toggle_menu"); 
 let mobilemenu = document.querySelector(".mobile-menu"); 

@@ -20,7 +20,7 @@ body {
     text-align: center;
 }
 .container {
-    max-width: 1170px;
+    max-width: 1370px;
     margin: auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -242,6 +242,7 @@ body {
     .demo-link {
         width: 260px;
         margin: 0 5px;
+        margin-bottom: 30px;
     }
   }
   @media (min-width: 768px) {
@@ -251,6 +252,7 @@ body {
     .demo-link {
         width: 310px;
         margin: 0 15px;
+        margin-bottom: 30px;
     }
   }
 
@@ -262,6 +264,7 @@ body {
         width: 400px;
         margin: 0 15px;
         height: 390px;
+        margin-bottom: 30px;
     }
   }
 

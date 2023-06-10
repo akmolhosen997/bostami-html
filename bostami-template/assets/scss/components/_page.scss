@@ -171,3 +171,8 @@
   }
 }
 
+.home-3 {
+  .page-title::after {
+    background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+  }
+}

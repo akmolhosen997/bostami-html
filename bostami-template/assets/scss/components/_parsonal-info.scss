@@ -236,3 +236,20 @@
     margin-top: 0;
   }
 }
+
+.home-3 {
+  .bostami-parsonal-info-area {
+    width: 100%;
+    margin-left: 0;
+  }
+  .bostami-parsonal-info-contact {
+    @media #{$lg} {
+        padding: 20px 10px;            
+    }
+  }
+  .bostami-parsonal-info-contact-item .text p {
+    @media #{$lg} {
+        font-size: 14px;       
+    }
+  }
+}

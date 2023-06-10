@@ -1,10 +1,11 @@
+@charset "UTF-8";
 /*
 ************
 *************************
 
-Template Name: Name - Template Name
-Description: Template description
-Author: author name
+Template Name: Name - Bostami - HTML Personal Portfolio Template
+Description: Bostami – HTML Personal Portfolio Template can be used for many purposes. It’s a creative, minimal and clean design.It’s suitable for Designer, Developer, Specialist, Content Writer, Instructor, Photographer, Freelancer, Software Engineer, Teacher or others expert who Show their professional projects and services in digital way. It’s 100% responsive and Ultra Super Fast beacause it’s made with Latest html
+Author: ib-themes
 Version: 1.0
 
 -----------------------------------------------------------------------------------
@@ -12,7 +13,18 @@ Version: 1.0
 CSS INDEX
 =================== 
 01. common
-02. header
+02. button
+03. page
+04. header
+05. parsonal info
+06. client
+07. what do
+08. resume
+09. portfolio
+10. blog
+11. contact
+12. preloader
+13. dark theme
 
 ******************************************************* 
 *************************************************************** */
@@ -1754,7 +1766,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 /*
 ************
 *************************
-03. button
+02. button
 ******************************************************* 
 *************************************************************** */
 .btn-1 {
@@ -1855,6 +1867,12 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-color: var(--theme-primary);
 }
 
+/*
+************
+*************************
+03. page
+******************************************************* 
+*************************************************************** */
 .page-wrapper {
   height: 100vh;
   width: 100vw;
@@ -2034,10 +2052,14 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-top: -13px;
 }
 
+.home-3 .page-title::after {
+  background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+}
+
 /*
 ************
 *************************
-03. back to top
+04. header
 ******************************************************* 
 *************************************************************** */
 .bostami-header-wrap {
@@ -2247,7 +2269,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-bottom: 0;
 }
 .main-style-2 .bostami-main-menu-wrap .bastami-main-menu ul li:not(:first-child) {
-  margin-left: 18px;
+  margin-left: 16px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .main-style-2 .bostami-main-menu-wrap .bastami-main-menu ul li:not(:first-child) {
@@ -2257,10 +2279,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 .main-style-2 .bostami-main-menu-wrap .bastami-main-menu ul li a {
   background: #fff;
   border-radius: 8px;
-  padding: 0px 16px;
+  padding: 0px 19px;
   transition: 0.3s;
-  height: 45px;
-  line-height: 45px;
+  height: 40px;
+  line-height: 40px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .main-style-2 .bostami-main-menu-wrap .bastami-main-menu ul li a {
@@ -2274,6 +2296,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 .main-style-2 .bostami-main-menu-wrap .bastami-main-menu ul li a span {
   display: inline-block;
   margin-bottom: 0;
+  margin-right: 5px;
+}
+.main-style-2 .bostami-main-menu-wrap .bastami-main-menu ul li a span svg {
+  width: 20px;
 }
 .main-style-2 .bostami-main-menu-wrap .bastami-main-menu ul li:is(.active) a {
   background: rgb(250, 82, 82);
@@ -2309,6 +2335,49 @@ input:focus::placeholder, textarea:focus::placeholder {
   }
 }
 
+.home-3 .text-right {
+  text-align: right;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .home-3 .text-right {
+    margin-bottom: 0;
+  }
+}
+.home-3 .bostami-main-menu-wrap {
+  width: unset;
+  position: unset;
+  display: inline-block;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .home-3 .bostami-main-menu-wrap {
+    display: none;
+  }
+}
+.home-3 .bastami-main-menu ul li {
+  display: inline-flex;
+  margin-bottom: 0;
+}
+.home-3 .bastami-main-menu ul li:not(:first-child) {
+  margin-left: 16px;
+}
+.home-3 .bastami-main-menu ul li:hover {
+  background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+}
+.home-3 .bastami-main-menu ul li:is(.active) {
+  background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+}
+
+.inner-page .bostami-header-wrap {
+  padding: 20px 0;
+}
+
+/*
+************
+*************************
+05. parsonal info
+******************************************************* 
+*************************************************************** */
 .bostami-parsonal-info-area {
   width: 400px;
   border-radius: 20px;
@@ -2561,6 +2630,27 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-top: 0;
 }
 
+.home-3 .bostami-parsonal-info-area {
+  width: 100%;
+  margin-left: 0;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .home-3 .bostami-parsonal-info-contact {
+    padding: 20px 10px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .home-3 .bostami-parsonal-info-contact-item .text p {
+    font-size: 14px;
+  }
+}
+
+/*
+************
+*************************
+06. client
+******************************************************* 
+*************************************************************** */
 .bostami-client {
   padding-top: 40px;
   padding-bottom: 70px;
@@ -2585,6 +2675,12 @@ input:focus::placeholder, textarea:focus::placeholder {
   }
 }
 
+/*
+************
+*************************
+07. what do
+******************************************************* 
+*************************************************************** */
 .bostami-what-do-item {
   border-radius: 12px;
   display: flex;
@@ -2638,6 +2734,23 @@ input:focus::placeholder, textarea:focus::placeholder {
   }
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .home-3 .bostami-what-do-item {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .home-3 .bostami-what-do-item .text .title {
+    font-size: 20px;
+  }
+}
+
+/*
+************
+*************************
+08. resume
+******************************************************* 
+*************************************************************** */
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .bostami-card-wrap {
     margin-bottom: 50px;
@@ -2769,6 +2882,12 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 20px;
 }
 
+/*
+************
+*************************
+09. portfolio
+******************************************************* 
+*************************************************************** */
 .fillter-btn-wrap {
   text-align: right;
 }
@@ -2870,6 +2989,19 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: #FA5252;
 }
 
+.home-3 .fillter-btn-wrap .fillter-btn:is(.is-checked) {
+  color: #FA5252;
+}
+.home-3 .fillter-btn-wrap .fillter-btn:hover {
+  color: #FA5252;
+}
+
+/*
+************
+*************************
+10. blog
+******************************************************* 
+*************************************************************** */
 .blog-slider-single {
   border-radius: 12px;
   padding: 20px;
@@ -2938,6 +3070,19 @@ input:focus::placeholder, textarea:focus::placeholder {
   background-color: #FA5252;
 }
 
+.home-3 .blog-slider-wrap .blog-progation span {
+  border: 3px solid #F95054 !important;
+}
+.home-3 .blog-slider-wrap .blog-progation span:is(.swiper-pagination-bullet-active) {
+  background-color: #F95054;
+}
+
+/*
+************
+*************************
+11. contact
+******************************************************* 
+*************************************************************** */
 .contact-area {
   padding: 60px 45px;
   border-radius: 20px;
@@ -3044,6 +3189,12 @@ input:focus::placeholder, textarea:focus::placeholder {
   line-height: 30px;
 }
 
+/*
+************
+*************************
+12. preloader
+******************************************************* 
+*************************************************************** */
 /* preloader */
 #preloader {
   position: fixed;
@@ -3172,6 +3323,293 @@ input:focus::placeholder, textarea:focus::placeholder {
     width: 0%;
   }
 }
+.breadcrumb-title {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #000;
+  line-height: 1.33;
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .breadcrumb-title {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .breadcrumb-title {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .breadcrumb-title br {
+    display: none;
+  }
+}
+
+.breadcrumb-meta-wrap .meta-item {
+  display: inline-block;
+  position: relative;
+  padding: 0 10px;
+}
+.breadcrumb-meta-wrap .meta-item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #696969;
+  top: 42%;
+  right: -4px;
+}
+.breadcrumb-meta-wrap .meta-item .img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+.breadcrumb-meta-wrap .meta-item .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.breadcrumb-meta-wrap .meta-item .author-name, .breadcrumb-meta-wrap .meta-item .date, .breadcrumb-meta-wrap .meta-item .comment {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: capitalize;
+  color: #44566C;
+}
+
+/*
+************
+*************************
+07. Sidebar
+******************************************************* 
+*************************************************************** */
+.subnet-sidebar-1-area {
+  overflow-Y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 13px 29px rgba(4, 0, 23, 0.1);
+  height: 100%;
+  position: fixed;
+  z-index: 333;
+  top: 0;
+  transition: 0.4s;
+  padding: 50px 50px;
+  right: -500px;
+  opacity: 0;
+  visibility: hidden;
+}
+@media (max-width: 767px) {
+  .subnet-sidebar-1-area {
+    padding: 50px 30px;
+  }
+}
+.subnet-sidebar-1-area:is(.active) {
+  right: 0;
+  visibility: visible;
+  opacity: 1;
+}
+.subnet-sidebar-1-logo-wrap {
+  position: relative;
+  top: -50px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s linear 0s;
+  -moz-transition: all 0.5s linear 0s;
+  -ms-transition: all 0.5s linear 0s;
+  -o-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+}
+.subnet-sidebar-1-logo-wrap:is(.is_show) {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.subnet-sidebar-1-logo a {
+  display: block;
+}
+.subnet-sidebar-1-close-btn button {
+  border: 0;
+  background-color: transparent;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--clr-common-white);
+  padding: 0px;
+  padding-right: 0;
+  transition: 0.3s;
+}
+.subnet-sidebar-1-close-btn button:hover {
+  color: var(--clr-theme-primary);
+}
+.subnet-sidebar-1-search {
+  width: 100%;
+}
+.subnet-sidebar-1-search-wrap {
+  position: relative;
+  top: -60px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.9s linear 0s;
+  -moz-transition: all 0.9s linear 0s;
+  -ms-transition: all 0.9s linear 0s;
+  -o-transition: all 0.9s linear 0s;
+  transition: all 0.9s linear 0s;
+}
+.subnet-sidebar-1-search-wrap:is(.is_show) {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.subnet-sidebar-1-search form {
+  position: relative;
+  z-index: 1;
+}
+.subnet-sidebar-1-search form input {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--clr-common-white);
+  font-size: 16px;
+  padding: 15px 15px;
+  padding-right: 50px;
+  border-radius: 5px;
+}
+.subnet-sidebar-1-search form input::-moz-placeholder {
+  color: var(--clr-common-white);
+  font-size: 16px;
+  opacity: 0.7;
+}
+.subnet-sidebar-1-search form input::placeholder {
+  color: var(--clr-common-white);
+  font-size: 16px;
+  opacity: 0.7;
+}
+.subnet-sidebar-1-search form button {
+  position: absolute;
+  background: transparent;
+  border: none;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--clr-common-white);
+}
+.subnet-sidebar-1-search form button:hover {
+  color: var(--clr-theme-primary);
+}
+
+.subnet-sidebar-1-area {
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.subnet-sidebar-1-area::-webkit-scrollbar {
+  width: 10px;
+  background-color: #080821;
+}
+.subnet-sidebar-1-area::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+.subnet-sidebar-1-area::-webkit-scrollbar-thumb {
+  background: var(--clr-theme-primary);
+  border-radius: 5px;
+}
+.subnet-sidebar-1-area::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-theme-secondary);
+}
+
+.subnet-sidebar-1-mobile-menu-wrap {
+  position: relative;
+  top: -100px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.8s linear 0s;
+  -moz-transition: all 0.8s linear 0s;
+  -ms-transition: all 0.8s linear 0s;
+  -o-transition: all 0.8s linear 0s;
+  transition: all 0.8s linear 0s;
+}
+.subnet-sidebar-1-mobile-menu-wrap:is(.is_show) {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.subnet-sidebar-1-mobile-menu-wrap .mobile_menu .mean-bar .mean-nav {
+  background: #080821;
+  margin-top: 0;
+}
+.subnet-sidebar-1-mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li {
+  padding: 0;
+}
+.subnet-sidebar-1-mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li a {
+  padding: 15px 0;
+  width: 100%;
+  font-size: 16px;
+  text-transform: capitalize;
+  border-top: none;
+  opacity: 1;
+}
+.subnet-sidebar-1-mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li a:hover {
+  color: var(--clr-common-white);
+}
+.subnet-sidebar-1-mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li:is(.has-dropdown-menu) a::after {
+  display: none;
+}
+.subnet-sidebar-1-mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li .mean-expand {
+  border: none !important;
+  background: transparent;
+  border-style: none;
+  width: 40px;
+  height: 53px;
+  line-height: 53px;
+  padding: 0;
+  margin: 0;
+}
+.subnet-sidebar-1-mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li .mean-expand:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--clr-theme-primary);
+}
+.subnet-sidebar-1-mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li .mean-expand:is(.mean-clicked) {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--clr-theme-primary);
+}
+.subnet-sidebar-1-mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li .sub-menu {
+  border-top: none;
+  background-color: transparent;
+  position: unset;
+  width: 100%;
+  top: 100%;
+  visibility: visible;
+  opacity: 1;
+  transform-origin: top;
+  transform: scaleY(1);
+}
+.subnet-sidebar-1-mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li .sub-menu li a {
+  border: none;
+  padding-left: 35px;
+  font-size: 16px;
+  color: var(--clr-common-white);
+}
+.subnet-sidebar-1-mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.subnet-sidebar-1-mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li:not(:last-child) a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*
+************
+*************************
+13. dark theme
+******************************************************* 
+*************************************************************** */
 .dark-theme .overly {
   position: fixed;
   left: 0;

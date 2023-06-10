@@ -218,7 +218,7 @@
           transition: 0.3s;
           margin-bottom: 0;
           &:not(:first-child) {
-            margin-left: 18px;
+            margin-left: 16px;
             @media #{$lg} {
               margin-left: 5px;
             }
@@ -226,10 +226,10 @@
           a {
             background: #fff ;
             border-radius: 8px;
-            padding: 0px 16px;
+            padding: 0px 19px;
             transition: 0.3s;
-            height: 45px;
-            line-height: 45px;
+            height: 40px;
+            line-height: 40px;
             @media #{$lg} {
               padding: 0px 10px;
             }
@@ -239,7 +239,11 @@
             }
             span {
               display: inline-block;
-              margin-bottom: 0;
+              margin-bottom: 0; 
+              margin-right: 5px;
+              svg {
+                width: 20px;
+              }
             }
 
           }
@@ -280,4 +284,44 @@
       }
     }
   }
+}
+
+.home-3 {
+  .text-right {
+    text-align: right;
+    margin-bottom: 40px;
+    @media #{$md,$xs} {
+      margin-bottom: 0;
+    }
+  }
+  .bostami-main-menu-wrap {
+    width: unset;
+    position: unset;
+    display: inline-block;
+    @media #{$md,$xs} {
+      display: none;
+    }
+  }
+  .bastami-main-menu ul li {
+    display: inline-flex;
+    margin-bottom: 0;
+
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
+
+    &:hover {
+      background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+    }
+    &:is(.active) {
+      background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+      
+    }
+  }
+}
+
+.inner-page {
+  .bostami-header-wrap {
+    padding: 20px 0;
+}
 }

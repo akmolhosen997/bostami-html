@@ -86,3 +86,13 @@
         }
     }
 }
+
+.home-3 {
+    .blog-slider-wrap .blog-progation span {
+        border: 3px solid #F95054 !important;
+        
+    }
+    .blog-slider-wrap .blog-progation span:is(.swiper-pagination-bullet-active) {
+        background-color: #F95054;
+    }
+}
