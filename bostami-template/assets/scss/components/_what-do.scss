@@ -27,8 +27,9 @@
       }
       .text {
         .title {
-          font-weight: 500;
           margin-bottom: 10px;
+          font-size: 20px;
+          font-weight: 600;
           @media #{$xl,lg,$md} {
             font-size: 22px;
           }

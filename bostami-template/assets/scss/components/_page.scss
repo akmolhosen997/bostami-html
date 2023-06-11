@@ -31,7 +31,9 @@
   padding-top: 30px;
   padding-bottom: 120px;
 }
-
+.page-wrapper.page-wrapper-2.inner-page {
+  padding-bottom: 0;
+}
 // page title
 .bostami-page-title-wrap {
     p {
@@ -171,8 +173,21 @@
   }
 }
 
+.footer-wrap {
+  span {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #44566C;
+    padding: 20px 0;
+  }
+}
+
+
 .home-3 {
   .page-title::after {
     background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
   }
 }
+

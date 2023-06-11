@@ -28,14 +28,22 @@ let mobilemenu = document.querySelector(".mobile-menu");
 
 
 let darktoggle = document.querySelector(".dark-btn-icon");
+let home1bgimg = document.querySelector(".page-wrapper");
+let home2bgimg = document.querySelector(".page-wrapper-2");
 
 darktoggle.onclick = function() {
 	document.body.classList.toggle("dark-theme");
 
 	if(document.body.classList.contains("dark-theme")) {
 		darktoggle.src = "assets/img/icon/sun-icon.png";
+		home1bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-dark-1.jpg')";
+		home2bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-dark-2.jpg')";
+
 	}else {
 		darktoggle.src = "assets/img/icon/mon-icon.png";
+		home1bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-1.jpg')";
+		home2bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-1.jpg')";
+
 	}
 }
 
@@ -132,7 +140,7 @@ let preloader = document.querySelector("#preloader");
 		preloader.classList.add("preloaded");
 		setTimeout(function () {
             preloader.remove();
-          },2000);
+          },1500);
 })
 
 // data background

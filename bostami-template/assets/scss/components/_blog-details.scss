@@ -1,6 +1,16 @@
+/*
+************
+*************************
+13. blog details
+******************************************************* 
+*************************************************************** */
+
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
 
+.blog-details-area {
+    background-color: #fff;
+}
 
 .breadcrumb-title {
     font-size: 30px;
@@ -56,6 +66,244 @@
             line-height: 21px;
             text-transform: capitalize;
             color: #44566C;
+        }
+    }
+}
+
+.blog-details-inner-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #202124;
+}
+
+.blog-details-content {
+    p {
+        font-size: 15px;
+        line-height: 30px;
+        color: #77838F;
+    }
+}
+.blog-details-blockquote {
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    color: #202124;
+    line-height: 30px;
+    padding: 40px 58px;
+    background-color: #F3F6F6;
+    @media #{$xs} {
+        padding: 30px 20px;
+    }
+    @media #{$sm} {
+        padding: 40px 58px;
+    }
+    span {
+        display: block;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #696969;
+        margin-top: 10px;
+    }
+}
+
+.blog-details-list-item-wrap {
+    li {
+        font-size: 15px;
+        line-height: 46px;
+        font-weight: 400;
+        color: #696969;
+        i {
+            display: inline-block;
+            font-size: 18px;
+            margin-right: 7px;
+        }
+    }
+}
+
+.blog-details-short-list {
+    li {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 46px;
+        color: #696969;
+        position: relative;
+        padding-left: 19px;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #696969;
+            top: 20px;
+            left: 0;
+        }
+    }
+}
+
+.blog-details-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:30px;
+    padding: 20px 0;
+    border-top: 1px solid #ECEDF2;
+    border-bottom: 1px solid #ECEDF2;
+    .title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #000;
+        text-transform: capitalize;
+        margin-bottom: 0;
+    }
+    .tag-item {
+        a {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            text-transform: capitalize;
+            color: #696969;
+            background: #F0F5F7;
+            border-radius: 4px;
+            padding: 7px 20px;
+            transition: .3s;
+            @media #{$xs} {
+                margin-bottom: 8px;
+            }
+            &:hover {
+                background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+                color: #fff;
+            }
+        }
+    }
+}
+
+.blog-details-comment-item {
+    .ratting {
+        text-align: right;
+        i {
+            display: inline-block;
+            font-size: 13px;
+            color: #FFC78B;
+        }
+    }
+    .flex {
+        display: flex;
+        gap:32px;
+        .img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex: 0 0 auto;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .content {
+            .name {
+                display: block;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                color: #202124;
+                text-transform: capitalize;
+            }
+            .bio {
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: capitalize;
+                line-height: 21px;
+                color: #696969;
+                margin-bottom: 18px;
+            }
+            p {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 26px;
+                color: #696969;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.blog-details-comment-box {
+    padding: 50px;
+    border: 1px solid #ECEDF2;
+    border-radius: 8px;
+    @media #{$xs} {
+        padding: 25px;
+    }
+    @media #{$sm} {
+        padding: 50px;
+    }
+    .blog-details-inner-title {
+        margin-bottom: 0;
+
+    }
+    .ratting {
+        i {
+            display: inline-block;
+            font-size: 13px;
+            color: #FFC78B;
+        }
+    }
+    form {
+        .input-title {
+            text-transform: capitalize;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 22px;
+            color: #202124;
+            display: block;
+            margin-bottom: 3px;
+        }
+        input , textarea {
+            display: block;
+            width: 100%;
+            border: none;
+            background: #F0F5F7;
+            border-radius: 8px;
+            height: 60px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #77838F;
+            padding: 22px;
+            &::placeholder {
+                font-size: 14px;
+                font-weight: 400;
+                color: #77838F;
+                text-transform: capitalize;
+            }
+        }
+        textarea {
+            height: 195px;
+            padding: 19px 25px;
+        }
+        .submit-comments {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #1A1A1A;
+            background: #F8FBFB;
+            border: 2px solid #44566C;
+            border-radius: 12px;
+            padding: 12px 34px;
+            transition: .3s;
+            &:hover {
+                background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+                color: #fff;
+                border-color: transparent;
+            }
         }
     }
 }

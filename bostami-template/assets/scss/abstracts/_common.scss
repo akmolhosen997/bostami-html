@@ -23,7 +23,9 @@ CSS INDEX
 10. blog
 11. contact
 12. preloader
-13. dark theme
+13. blog details
+14. sidebar
+15. dark theme
 
 ******************************************************* 
 *************************************************************** */
@@ -148,18 +150,18 @@ label {
 	font-weight: 400;
 }
 *::-moz-selection {
-	background-color: var(--clr-theme-primary);
-	color: var(--clr-common-white);
+	background-color: #037FFF;
+	color: #fff;
 	text-shadow: none;
 }
 ::-moz-selection {
-	background-color: var(--clr-theme-primary);
-	color: var(--clr-common-white);
+	background-color: #037FFF;
+	color: #fff;
 	text-shadow: none;
 }
 ::selection {
-	background-color: var(--clr-theme-primary);
-	color: var(--clr-common-white);
+	background-color: #037FFF;
+	color: #fff;
 	text-shadow: none;
 }
 
