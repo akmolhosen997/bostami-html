@@ -23,9 +23,15 @@
     border-radius: 16px;
     padding: 30px;
     position: sticky;
-    top: -235px;
+    top: -45px;
     @media #{$xxl} {
       width: 120px;
       padding: 18px;
     }
   }
+.bostami-client-slider {
+  .swiper-slide {
+    text-align: center !important;
+  }
+}
+  

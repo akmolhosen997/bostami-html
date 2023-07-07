@@ -161,4 +161,36 @@
             background-color: transparent;
         }
     }
+
+    .home-3 {
+        .bostami-header-wrap {
+            background: transparent !important;
+        }
+        .bostami-parsonal-info-social-link li a:hover {
+            background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+        }
+        .bastami-main-menu ul li:is(.active) {
+            background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+        }
+        .bastami-main-menu ul li:hover {
+            background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+        }
+    }
+    .home-1 {
+        .bostami-header-wrap {
+            background: transparent;
+        }
+    }
+    .h1-modal-box {
+        .modal-dialog {
+            background-color: #323232;
+            .modal-content {
+                background-color: #323232;
+                .modal-body .h1-modal-comment-box textarea {
+                    background: #000;
+                    color: white;
+                }
+            }
+        }
+    }
 }

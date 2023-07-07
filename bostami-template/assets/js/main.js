@@ -17,8 +17,6 @@ $('.main_menu_3').meanmenu({
 	meanScreenWidth: "991"
 });
 
-
-
 let menutoggole = document.querySelector(".toggle_menu"); 
 let mobilemenu = document.querySelector(".mobile-menu"); 
 	menutoggole.onclick = function() {
@@ -26,27 +24,65 @@ let mobilemenu = document.querySelector(".mobile-menu");
 		mobilemenu.classList.toggle('active')
 	}
 
+// dark mood
 
-let darktoggle = document.querySelector(".dark-btn-icon");
-let home1bgimg = document.querySelector(".page-wrapper");
-let home2bgimg = document.querySelector(".page-wrapper-2");
 
-darktoggle.onclick = function() {
-	document.body.classList.toggle("dark-theme");
+var darktoggle = document.querySelector(".dark-btn-icon");
+var home1bgimg = document.querySelector(".page-wrapper");
+var home2bgimg = document.querySelector(".page-wrapper-2");
 
-	if(document.body.classList.contains("dark-theme")) {
+// function changeall() {
+
+// 	if(document.body.classList.contains("dark-theme")) {
+// 		darktoggle.src = "assets/img/icon/sun-icon.png";
+// 		home1bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-dark-1.jpg')";
+// 		home2bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-dark-2.jpg')";
+
+// 	}else {
+// 		darktoggle.src = "assets/img/icon/mon-icon.png";
+// 		home1bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-1.jpg')";
+// 		home2bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-1.jpg')";
+
+// 	}
+// }
+
+// Function to toggle the dark theme
+function toggleDarkTheme() {
+	// Toggle the class on the body element
+	$('body').toggleClass('dark-theme');
+
+	// Store the preference in local storage
+	const isDarkTheme = $('body').hasClass('dark-theme');
+	localStorage.setItem('darkTheme', isDarkTheme);
+
+
+
+	if(isDarkTheme)  {
 		darktoggle.src = "assets/img/icon/sun-icon.png";
 		home1bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-dark-1.jpg')";
-		home2bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-dark-2.jpg')";
-
 	}else {
 		darktoggle.src = "assets/img/icon/mon-icon.png";
 		home1bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-1.jpg')";
 		home2bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-1.jpg')";
-
 	}
+	
+	
 }
 
+// Check if the user preference is already stored in local storage
+$(document).ready(function() {
+	const isDarkTheme = localStorage.getItem('darkTheme') === 'true';
+
+	// Apply the dark theme if the preference is set to true
+	if (isDarkTheme) {
+		$('body').addClass('dark-theme');
+		darktoggle.src = "assets/img/icon/sun-icon.png";
+		home1bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-dark-1.jpg')";
+	}
+
+	// Attach click event to the specified div
+	$('.dark-btn').on('click', toggleDarkTheme);
+});
 
 //  client slider
 
@@ -157,6 +193,8 @@ $('.odometer').appear(function (e) {
 		$(this).html(countNumber);
 	});
 });
+
+
 
 
 // WOW active

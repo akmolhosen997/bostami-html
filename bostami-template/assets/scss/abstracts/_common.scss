@@ -315,3 +315,6 @@ input:focus::placeholder, textarea:focus::placeholder {
     gap: 30px;
 }
 
+.modal-backdrop.fade.show {
+    display: none;
+}

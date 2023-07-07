@@ -74,6 +74,223 @@
     }
 }
 
+
+.h1-modal-box {
+    position: fixed;
+    overflow: hidden;
+    background-color: #00000073;
+    .modal-dialog {
+        max-width: 850px;
+        height: 90vh;
+        overflow: hidden;
+        background-color: white;
+        padding: 30px;
+        border-radius: 20px;
+        border: none;
+
+        @media #{$md} {
+            max-width: 660px;
+        }
+        @media #{$xs} {
+            max-width: 95%;
+            padding: 10px;
+        }
+        @media #{$sm} {
+            max-width: 95%;
+            padding: 30px;
+        }
+
+
+            /* width */
+        ::-webkit-scrollbar {
+        width: 10px;
+            }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background-color: #E9E3E3; 
+            border-radius: 10px;
+            }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #9C9FA1; 
+            border-radius: 10px;
+            }
+            
+        .modal-content {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            height: 100%;
+            position: relative;
+            padding-right: 15px;
+            border-radius: 0;
+            border: none;
+            .modal-header {
+                display: inline-block;
+                position: fixed;
+                right: 25%;
+                top: 5%;
+                z-index: 18;
+                border-bottom: 0;
+                padding: 0;
+                @media #{$over} {
+                    right: 23%;
+                }
+                @media #{$xxxl} {
+                    right: 18%;
+                    top: 8%;
+                }
+                @media #{$xxl} {
+                    right: 13%;
+                    top: 11%;
+                }
+                @media #{$xl} {
+                    right: 8%;
+                    top: 10%;
+                }
+                @media #{$lg} {
+                    right: 1%;
+                    top: 9%;
+                }
+                @media #{$md} {
+                    right: 1%;
+                    top: 9%;
+                }
+                @media #{$xs} {
+                    right: 83%;
+                    top: 4%;
+                }
+                @media #{$sm} {
+                    right: 90%;
+                    top: 10%;
+                }
+                .close {
+                    background: transparent;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 20px;
+                    color: white;
+                    border-color: white;
+                    border: 1px solid;
+                    line-height: 38px;
+                    transition: .3s;
+                    @media #{$xs} {
+                        border-color: #E12A72;
+                        color: #E12A72;
+                    }
+                    &:hover {
+                        rotate: 90deg;
+                        border-color: #E12A72;
+                        color: #E12A72;
+                    }
+                }
+            }
+            .modal-body {
+                .h1-modal-img {
+                    border-radius: 15px;
+                    overflow: hidden;
+                    margin-bottom: 20px;
+                }
+                .blog-meta {
+                    margin-bottom: 15px;
+                    .blog-date, .blog-cetagory {
+                        font-size: 18px;
+                        margin-right: 15px;
+                    }
+                }
+                .blog-title {
+                    font-size: 28px;
+                    @media #{$xs} {
+                        font-size: 22px;;
+                    }
+                }
+                .h1-modal-comment-item {
+                    display: flex;
+                    gap: 30px;
+                    border: 1px solid #FA5252;
+                    border-radius: 15px;
+                    padding: 20px;
+                    margin-top: 50px;
+                    margin-bottom: 30px;
+                    @media #{$xs} {
+                        flex-wrap: wrap;
+                        gap: 15px;
+                    }
+                    .img {
+                        width: 125px;
+                        height: 122px;
+                        flex: 0 0 auto;
+                        overflow: hidden;
+                        border-radius: 15px;
+                    }
+                    .content {
+                        .name-date {
+                            margin-bottom: 0px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .name {
+                                font-size: 22px;
+                                font-weight: 500;
+                                margin-bottom: 0;
+                            }
+                            .date {
+                                font-size: 14px;
+                            }
+                        }
+                        .comment-text {
+                            margin-bottom: 5px;
+                        }
+                        .reply-btn {
+                            transition: .3s;
+                            &:hover {
+                                color: #FA5252;
+                            }
+                        }
+                    }
+                }
+                .h1-modal-comment-box {
+                    .title {
+                        font-size: 32px;
+                        font-weight: 400;
+                    }
+                    textarea {
+                        width: 100%;
+                        height: 80px;
+                        border: none;
+                        background: #F3F6F6;
+                        border-radius: 5px;
+                        margin-bottom: 20px;
+                        padding: 15px;
+                        font-size: 12px;
+                        &::placeholder {
+                            font-size: 12px;
+                            color: #9C9FA1;
+                        }
+                    }
+                    button {
+                        font-size: 14px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        border: none;
+                        outline: none;
+                        padding: 8px 20px;
+                        border-radius: 20px;
+                        background: linear-gradient(180deg, #FA5252 0%, #E12A72 100%);
+                        color: white;
+                        &:hover {
+                        background: linear-gradient(80deg, #FA5252 0%, #E12A72 100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 .page-wrapper-2 {
     .blog-slider-wrap {
         .blog-progation {

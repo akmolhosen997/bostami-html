@@ -18,7 +18,7 @@
       padding: 40px 30px;
       margin-left: -100px;
       position: sticky;
-      top: -100px;
+      top: 100px;
       @media #{$xxl} {
         width: 340px;
         margin-left: -40px;
@@ -27,11 +27,13 @@
         width: 100%;
         margin-left: 0px;
         padding: 30px 15px;
+        top: -40px;
       }
       @media #{$lg,$md} {
         width: 100%;
         margin-left: 0px;
         margin-bottom: 30px;
+        top: -40px;
       }
       @media #{$xs} {
         width: 100%;
@@ -251,5 +253,8 @@
     @media #{$lg} {
         font-size: 14px;       
     }
+  }
+  .bostami-parsonal-info-social-link li a:hover {
+    background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
   }
 }

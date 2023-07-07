@@ -323,5 +323,44 @@
 .inner-page {
   .bostami-header-wrap {
     padding: 20px 0;
+  }
 }
+
+.home-3 {
+  .bostami-header-menu-btn .menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .menu-btn.active {
+    background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+  }
+}
+
+.home-1 {
+  .bostami-header-area {
+    margin-bottom: 205px;
+    @media #{$xl,$lg,$md,$xs} {
+      margin-bottom: 50px;
+    }
+  }
+  .bostami-header-wrap {
+    margin-left: -112px;
+    margin-right: -70px;
+    background-color: transparent;
+    @media #{$xxl} {
+      margin-left: -50px;
+      margin-right: -40px;
+    }
+    @media #{$xl,$lg,$md,$xs} {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+  .bostami-header-menu-btn .menu-btn {
+    width: 40px;
+    height: 40px;
+    @media #{$over,$xxxl,$xxl} {
+      display: none;
+    }
+  }
 }

@@ -82,14 +82,28 @@
       background-color: var(--theme-secondary);
     }
   }
-  .dark-btn.dark-btn-2 {
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    margin-right: 0;
-    .dark-btn-icon {
-        width: 22px;
+
+.home-3 {
+    .dark-btn {
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
     }
+}
+
+.home-1 {
+    .dark-btn {
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+    }
+}
+
+.dark-btn.dark-btn-2 {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 0;
 }
   
 // form btn

@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" type="image/x-icon" href="img/faveicon.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="img/faveicon.jpg">
     <title>Bostami Html Template</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap">
 
-    
+    <!-- CSS here -->
+    <link rel="stylesheet" href="bostami-template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bostami-template/assets/css/animate.min.css">
+    <link rel="stylesheet" href="bostami-template/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="bostami-template/assets/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
 
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -19,123 +23,163 @@
     <!-- hero area -->
     <div class="hero-area">
         <div class="container">
-            <div class="hero-content-wrap">
-                <img class="site-logo" src="img/logo.png" alt="">
-                <h1 class="title" >Bostami Bootstrap 5 Template</h1>
-                <div class="hero-btn-wrap">
-                    <a class="btn btn-1" href="#"> view demo</a>
-                    <a class="btn btn-2" href="#">Purchase Now</a>
+            <div class="content-flex">
+                <div class="hero-content-wrap">
+                    <img class="site-logo" src="img/logo-preview.png" alt="">
+                    <h1 class="title" >Modern,Trending & Creative Portfolio <br>
+                        <span>Tailwind CSS</span> & <span>React NextJS</span> & <span>Bootstrap 5</span></h1>
+                    <div class="hero-btn-wrap">
+                        <a class="btn btn-1" href="#demo">view demo <i class="far fa-arrow-down"></i></a>
+                        <a class="btn btn-2" href="#">Purchase Now</a>
+                    </div>
                 </div>
             </div>
-            
-
         </div>
     </div>
 
     <!-- hemo demo -->
-    <div class="home-demo-area bg-black ">
+    <div class="home-demo-area bg-black " id="demo">
         <div class="container">
             <div class="section-title-wrap text-center mb-70">
                 <h1 class="main-title" >home demo</h1>
-                <img class="bg-shape" src="img/bg-shape-1.png" alt="">
-                <h2 class="section-title">02 Unique Light & Dark Demo</h2>
+                <img class="bg-shape" src="img/preview.png" alt="">
+                <h2 class="section-title">06 Awesome Light & Dark Demo</h2>
                 <p class="section-pera" >Bostami build with Modern, Elegant & Beautiful  trendng
                     <br> technology like Bootstrap 5 HTML template.</p>
             </div>
 
-            <div class="demo-link-wrap text-center">
-                <a class="demo-link" target="_blank" href="bostami-template/home.html">
-                    <span>
-                        <img src="img/home-1.png" alt="">
-                    </span>
-                    <span class="demo-title" >Box Layout (Light)</span>
-                </a>
-                <a class="demo-link" target="_blank" href="bostami-template/home-2.html">
-                    <span>
-                        <img src="img/home-2.png" alt="">
-                    </span>
-                    <span class="demo-title" >Regular Layout (Light)</span>
-                </a>
-                <a class="demo-link" target="_blank" href="bostami-template/home-3.html">
-                    <span>
-                        <img src="img/home-3.png" alt="">
-                    </span>
-                    <span class="demo-title" >Regular Layout (Light)</span>
-                </a>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <a class="demo-link" target="_blank" href="bostami-template/home.html">
+                        <span>
+                            <img src="img/homeonelight.png" alt="">
+                        </span>
+                        <span class="demo-title" >Box Layout (Light)</span>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <a class="demo-link" target="_blank" href="bostami-template/home-2.html">
+                        <span>
+                            <img src="img/hometwolight.png" alt="">
+                        </span>
+                        <span class="demo-title" >Regular Layout (Light)</span>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <a class="demo-link" target="_blank" href="bostami-template/home-3.html">
+                        <span>
+                            <img src="img/homeonelight.png" alt="">
+                        </span>
+                        <span class="demo-title" >Regular Layout (Light)</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- hemo demo -->
+    <!-- feature -->
     <div class="home-demo-area bg-gray">
+
         <div class="container">
             <div class="section-title-wrap text-center mb-70">
                 <h1 class="main-title" >Salient Features</h1>
                 <img class="bg-shape" src="img/bg-shape-1.png" alt="">
             </div>
 
-            <div class="feature-item-wrap">
+            <div class="row">
 
-
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <img src="img/f-icon-1.png" alt="">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/1.png" alt="">
+                        </div>
+                        <h3 class="feature-title" >Next JS 13+</h3>
+                        <p class="feature-text" >We used latest react Nextjs vertion ^13. Max Components are Reusable for you. It's a awesome design made by React NextJS.</p>
                     </div>
-                    <h3 class="feature-title" >HTML5</h3>
-                    <p class="feature-text" >We used latest react vertion ^18. Max Components are Reusable for you. It's a awesome design made by React.</p>
                 </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <img src="img/f-icon-2.png" alt="">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/2.png" alt="">
+                        </div>
+                        <h3 class="feature-title" >AOS Animation</h3>
+                        <p class="feature-text" >This way you can trigger animation on one element, while you scroll to another - useful in animating fixed elements</p>
                     </div>
-                    <h3 class="feature-title" >Bootstrap 5</h3>
-                    <p class="feature-text" >Bootstrap 5 is basically a modern,trending and utility-first CSS framework for rapidly building custom user interfaces.</p>
                 </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <img src="img/f-icon-3.png" alt="">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/3.png" alt="">
+                        </div>
+                        <h3 class="feature-title" >Tailwind v3+</h3>
+                        <p class="feature-text" >Tailwind CSS is basically a modern,trending and utility-first CSS framework for rapidly building custom user interfaces.</p>
                     </div>
-                    <h3 class="feature-title" >Modern Design</h3>
-                    <p class="feature-text" >It has a simple API with powerful features like lazy code loading, dynamic route matching, and location transition handling</p>
                 </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <img src="img/f-icon-4.png" alt="">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/4.png" alt="">
+                        </div>
+                        <h3 class="feature-title" >React Icon</h3>
+                        <p class="feature-text" >React-icons uses ES6 features to import the icons into your React app. And it makes it so that only the icons you actually use from each library get imported.</p>
                     </div>
-                    <h3 class="feature-title" >Fast Loading Speed</h3>
-                    <p class="feature-text" >It allows you to use state and other React features without writing a class. Hooks are the functions which hook into React state and lifecycle features from function components.</p>
                 </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <img src="img/f-icon-5.png" alt="">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/5.png" alt="">
+                        </div>
+                        <h3 class="feature-title" >React Hooks</h3>
+                        <p class="feature-text" >It allows you to use state and other React features without writing a class. Hooks are the functions which hook into React state and lifecycle features from function components.</p>
                     </div>
-                    <h3 class="feature-title" >Working Contact Form</h3>
-                    <p class="feature-text" >You will get working contact form without any type of Bakcend. We integrated it With Email js. just follow our documentation and integrate it easy way</p>
                 </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <img src="img/f-icon-6.png" alt="">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/6.png" alt="">
+                        </div>
+                        <h3 class="feature-title" >Api Ready Code</h3>
+                        <p class="feature-text" >We made all the code with Array of Object based. so you can prepare for your api call whenever you want for it</p>
                     </div>
-                    <h3 class="feature-title" >Well Documented</h3>
-                    <p class="feature-text" >React-icons uses ES6 features to import the icons into your React app. And it makes it so that only the icons you actually use from each library get imported.</p>
                 </div>
-
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/7.png" alt="">
+                        </div>
+                        <h3 class="feature-title" >Next Head</h3>
+                        <p class="feature-text" >Next Head is a component which lets you control your document head using their React component. With this plugin, attributes you add in their component, e.g. title, meta attributes</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/8.png" alt="">
+                        </div>
+                        <h3 class="feature-title" >React Toastify</h3>
+                        <p class="feature-text" >React-Toastify allows you to add notifications to your app with easy and comfortable way</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/9.png" alt="">
+                        </div>
+                        <h3 class="feature-title" >Working Contact Form</h3>
+                        <p class="feature-text" >You will get working contact form without any type of Bakcend. We integrated it With Email js. just follow our documentation and integrate it easy way</p>
+                    </div>
+                </div>
 
             </div>
 
         </div>
     </div>
 
-    <!-- hemo demo -->
+    <!-- buy -->
     <div class="home-demo-area bg-black">
         <div class="container">
             <div class="text-center">
-                <h2 class="buy-title" >Purchase Bostami & Build Your Dream Portfolio <span>html</span> Template.</h2>
+                <h2 class="title" >Purchase Bostami & Build Your Dream Portfolio React NextJS & Tailwind CSS & <span>HTML</span> Portfolio Template.</h2>
                 <a class="btn btn-1" href="#">Purchase Now</a>
             </div> 
         </div>
@@ -146,6 +190,13 @@
             <span>© 2022 All Rights Reserved by <a href="#">ib-themes</a>.</span>
         </div>
     </div>
+
+
+    <script src="bostami-template/assets/js/jquery.min.js"></script>
+    <script src="bostami-template/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="bostami-template/assets/js/wow.js"></script>
+    <script src="bostami-template/assets/js/appear.min.js"></script>
+    <script src="bostami-template/assets/js/main.js"></script>
     
 </body>
 
