@@ -51,8 +51,8 @@
         transition: .3s;
         transform-origin: top;
         font-size: 14px;
-        &:focus {
-            height: 40px;
+        &:is(.height) {
+            height: 40px ;
         }
     }
 }

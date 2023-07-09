@@ -172,6 +172,9 @@
             svg * {
               fill: var(--common-white);
             }
+            img {
+              filter: brightness(5);
+            }
           }
         }
       }
@@ -182,6 +185,9 @@
           span {
             svg * {
               fill: var(--common-white);
+            }
+            img {
+              filter: brightness(5);
             }
           }
         }
@@ -245,7 +251,6 @@
                 width: 20px;
               }
             }
-
           }
           &:is(.active) {
             a {
@@ -362,5 +367,26 @@
     @media #{$over,$xxxl,$xxl} {
       display: none;
     }
+  }
+  .bostami-header-menu-btn .menu-btn {
+    background: #1B74E4;
+  }
+  .mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li:is(.active) a {
+    color: #1B74E4;
+  }
+  .mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li:hover a {
+    color: #1B74E4;
+  }
+  .mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li:hover a span img {
+    filter: saturate(20.5);
+  }
+  .mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li:is(.active) a span img {
+    filter: saturate(20.5);
+  }
+  .mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li a:hover span svg * {
+    fill: #1B74E4;
+  }
+  .mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li:is(.active) a span svg * {
+    fill: #1B74E4;
   }
 }

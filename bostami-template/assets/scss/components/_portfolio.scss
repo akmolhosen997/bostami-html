@@ -43,6 +43,7 @@
         border-radius: 12px;
         overflow: hidden;
         margin-bottom: 17px;
+        display: block;
     }
     .item-subtitle {
         display: block;
@@ -75,6 +76,176 @@
     margin-bottom: 20px;
 }
 
+
+.portfolio-modal-box {
+    position: fixed;
+    overflow: hidden;
+    background-color: #00000073;
+    .modal-dialog {
+        max-width: 850px;
+        height: 90vh;
+        overflow: hidden;
+        background-color: white;
+        padding: 30px;
+        border-radius: 20px;
+        border: none;
+
+        @media #{$md} {
+            max-width: 660px;
+        }
+        @media #{$xs} {
+            max-width: 95%;
+            padding: 10px;
+        }
+        @media #{$sm} {
+            max-width: 95%;
+            padding: 30px;
+        }
+
+
+            /* width */
+        ::-webkit-scrollbar {
+        width: 10px;
+            }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background-color: #E9E3E3; 
+            border-radius: 10px;
+            }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #9C9FA1; 
+            border-radius: 10px;
+            }
+            
+        .modal-content {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            height: 100%;
+            position: relative;
+            padding-right: 15px;
+            border-radius: 0;
+            border: none;
+            .modal-header {
+                display: inline-block;
+                position: fixed;
+                right: 25%;
+                top: 5%;
+                z-index: 18;
+                border-bottom: 0;
+                padding: 0;
+                @media #{$over} {
+                    right: 23%;
+                }
+                @media #{$xxxl} {
+                    right: 18%;
+                    top: 8%;
+                }
+                @media #{$xxl} {
+                    right: 13%;
+                    top: 11%;
+                }
+                @media #{$xl} {
+                    right: 8%;
+                    top: 10%;
+                }
+                @media #{$lg} {
+                    right: 1%;
+                    top: 9%;
+                }
+                @media #{$md} {
+                    right: 1%;
+                    top: 9%;
+                }
+                @media #{$xs} {
+                    right: 83%;
+                    top: 4%;
+                }
+                @media #{$sm} {
+                    right: 90%;
+                    top: 10%;
+                }
+                .close {
+                    background: transparent;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 20px;
+                    color: white;
+                    border-color: white;
+                    border: 1px solid;
+                    line-height: 38px;
+                    transition: .3s;
+                    @media #{$xs} {
+                        border-color: #E12A72;
+                        color: #E12A72;
+                    }
+                    &:hover {
+                        rotate: 90deg;
+                        border-color: #E12A72;
+                        color: #E12A72;
+                    }
+                }
+            }
+            .modal-body {
+                .h1-modal-img {
+                    border-radius: 15px;
+                    overflow: hidden;
+                    margin-bottom: 20px;
+                }
+                
+                .blog-title {
+                    font-size: 28px;
+                    text-align: center;
+                    color: #FA5252;
+                    margin-bottom: 35px;
+                    @media #{$xs} {
+                        margin-top: 20px;
+                        font-size: 22px;;
+                    }
+                }
+                .portfolio-modal-table {
+                    margin-bottom: 20px;
+                    .portfolio-modal-table-text {
+                        font-size: 18px;
+                        font-weight: 400;
+                        @media #{$md} {
+                            font-size: 15px;;
+                        }
+                        @media #{$xs} {
+                            font-size: 14px;;
+                        }
+                        @media #{$sm} {
+                            font-size: 16px;;
+                        }
+                        i {
+                            display: inline-block;
+                            margin-right: 10px;
+                        }
+                        span {
+                            font-weight: 500;
+                        }
+                        a {
+                            display: inline-block;
+                            font-weight: 500;
+                            &:hover {
+                                color: #FA5252;
+                            }
+                        }
+                    }
+                }
+                .h1-modal-paragraph {
+                    margin-bottom: 30px;
+                }
+            
+            }
+        }
+    }
+}
+
+
 .page-wrapper-2 {
     .isotop-item,
     .grid-sizer {
@@ -96,6 +267,9 @@
     .fillter-btn-wrap .fillter-btn.is-checked {
         color: #FA5252;
     }
+    .fillter-item .item-title:hover {
+        color: #FA5252;
+    }
 }
 
 .home-3 {
@@ -103,6 +277,9 @@
         color: #FA5252;
     }
     .fillter-btn-wrap .fillter-btn:hover {
+        color: #FA5252;
+    }
+    .fillter-item .item-title:hover {
         color: #FA5252;
     }
 }

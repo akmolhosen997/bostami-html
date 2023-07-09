@@ -239,6 +239,12 @@
   }
 }
 
+.page-wrapper-2 {
+  .bostami-parsonal-info-contact-item .icon:hover {
+    background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+  }
+}
+
 .home-3 {
   .bostami-parsonal-info-area {
     width: 100%;
@@ -255,6 +261,9 @@
     }
   }
   .bostami-parsonal-info-social-link li a:hover {
+    background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+  }
+  .bostami-parsonal-info-contact-item .icon:hover {
     background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
   }
 }

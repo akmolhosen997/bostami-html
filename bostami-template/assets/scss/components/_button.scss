@@ -97,6 +97,9 @@
         height: 40px;
         line-height: 38px;
     }
+    .dark-btn:hover {
+        background-color: #1B74E4;
+    }
 }
 
 .dark-btn.dark-btn-2 {
@@ -122,5 +125,18 @@
     &:hover {
         background-color: var(--theme-primary);
         border-color: var(--theme-primary);
+    }
+}
+
+.page-wrapper-2 {
+    .form-btn:hover {
+        background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+        border-color: transparent;
+    }
+}
+.home-3 {
+    .form-btn:hover {
+        background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+        border-color: transparent;
     }
 }

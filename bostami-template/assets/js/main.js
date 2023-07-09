@@ -1,7 +1,17 @@
 (function ($) {
 "use strict";
 
-// meanmenu
+// preloader start
+let preloader = document.querySelector("#preloader");
+	window.addEventListener('load', function(){
+		preloader.classList.add("preloaded");
+		setTimeout(function () {
+            preloader.remove();
+          },1500);
+})
+// preloader end
+
+// meanmenu start
 $('.main_menu').meanmenu({
 	meanMenuContainer: '.mobile_menu',
 	meanScreenWidth: "1399"
@@ -16,35 +26,21 @@ $('.main_menu_3').meanmenu({
 	meanMenuContainer: '.mobile_menu_3',
 	meanScreenWidth: "991"
 });
+// meanmenu end
 
+// mobile menu start
 let menutoggole = document.querySelector(".toggle_menu"); 
 let mobilemenu = document.querySelector(".mobile-menu"); 
 	menutoggole.onclick = function() {
 		menutoggole.classList.toggle('active')
 		mobilemenu.classList.toggle('active')
 	}
+// mobile menu end
 
-// dark mood
-
-
+// dark mood start
 var darktoggle = document.querySelector(".dark-btn-icon");
 var home1bgimg = document.querySelector(".page-wrapper");
 var home2bgimg = document.querySelector(".page-wrapper-2");
-
-// function changeall() {
-
-// 	if(document.body.classList.contains("dark-theme")) {
-// 		darktoggle.src = "assets/img/icon/sun-icon.png";
-// 		home1bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-dark-1.jpg')";
-// 		home2bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-dark-2.jpg')";
-
-// 	}else {
-// 		darktoggle.src = "assets/img/icon/mon-icon.png";
-// 		home1bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-1.jpg')";
-// 		home2bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-1.jpg')";
-
-// 	}
-// }
 
 // Function to toggle the dark theme
 function toggleDarkTheme() {
@@ -55,8 +51,6 @@ function toggleDarkTheme() {
 	const isDarkTheme = $('body').hasClass('dark-theme');
 	localStorage.setItem('darkTheme', isDarkTheme);
 
-
-
 	if(isDarkTheme)  {
 		darktoggle.src = "assets/img/icon/sun-icon.png";
 		home1bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-dark-1.jpg')";
@@ -66,9 +60,7 @@ function toggleDarkTheme() {
 		home2bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-1.jpg')";
 	}
 	
-	
 }
-
 // Check if the user preference is already stored in local storage
 $(document).ready(function() {
 	const isDarkTheme = localStorage.getItem('darkTheme') === 'true';
@@ -83,9 +75,9 @@ $(document).ready(function() {
 	// Attach click event to the specified div
 	$('.dark-btn').on('click', toggleDarkTheme);
 });
+// dark mood end
 
-//  client slider
-
+//  client slider start
 if (jQuery(".client_slide_active").length > 0) {
 	let acooterbrand = new Swiper('.client_slide_active', {
 		slidesPerView: 4,
@@ -118,9 +110,9 @@ if (jQuery(".client_slide_active").length > 0) {
 		}
 
 });}
+// client slider end
 
-
-// work fillter
+// portfolio fillter start
 function enableMasonry2  () {
 	// ----------------------------- isotop gallery
 
@@ -155,8 +147,9 @@ function enableMasonry2  () {
 }
 
 enableMasonry2();
+// portfolio filter end
 
-// blog slider
+// blog slider start
 if (jQuery(".blog-slider-active").length > 0) {
 	let acooterbrand = new Swiper('.blog-slider-active', {
 		slidesPerView: 1,
@@ -170,20 +163,32 @@ if (jQuery(".blog-slider-active").length > 0) {
 			},
 
 });}
+// blog slider end
 
-let preloader = document.querySelector("#preloader");
-	window.addEventListener('load', function(){
-		preloader.classList.add("preloaded");
-		setTimeout(function () {
-            preloader.remove();
-          },1500);
-})
+// contact form
+$(".input-box.name").click(function(){
+	$(".input-box.name").addClass("height");
+	$(".input-box.name").css("borderBottom","1px solid #FE7878");
+	$(".input-lebel.name").css("color","#FE7878");
+});
+
+$(".input-box.gmail").click(function(){
+	$(".input-box.gmail").addClass("height");
+	$(".input-box.gmail").css("borderBottom","1px solid #1B74E4");
+	$(".input-lebel.gmail").css("color","#1B74E4");
+});
+
+$(".input-box.message").click(function(){
+	$(".input-box.message").addClass("height");
+	$(".input-box.message").css("borderBottom","1px solid #CE65F3");
+	$(".input-lebel.message").css("color","#CE65F3");
+});
+// contact form end
 
 // data background
 $("[data-background]").each(function(){
 	$(this).css("background-image","url("+$(this).attr("data-background") + ") ")
 })
-
 
 //   odometer
 $('.odometer').appear(function (e) {
@@ -194,12 +199,7 @@ $('.odometer').appear(function (e) {
 	});
 });
 
-
-
-
 // WOW active
 new WOW().init();
-
-
 
 })(jQuery);

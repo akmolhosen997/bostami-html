@@ -121,13 +121,21 @@
         .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li a span svg * {
             fill: #fff;
         }
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li a span img {
+            filter: brightness(5);
+        }
         .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li:hover a span svg * {
             fill: #FA5252;
         }
         .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li.active a span svg * {
             fill: #FA5252;
         }
-
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li:hover a span img {
+            filter: saturate(25);
+        }
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li:is(.active) a span img {
+            filter: saturate(25);
+        }
         // border 
         .bostami-what-do-item ,
         .bostami-card-item ,
@@ -140,6 +148,9 @@
 
     }
     .page-wrapper-2 {
+        .main-style-2 .bostami-main-menu-wrap .bastami-main-menu ul li a span img {
+            filter: brightness(5);
+        }
         .bostami-page-area .bostami-page-wrap {
             background: #000;
         }
@@ -160,9 +171,18 @@
         .bostami-page-area .bostami-parsonal-info-contact {
             background-color: transparent;
         }
+        .bostami-parsonal-info-contact-item .icon:hover {
+            background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+        }
     }
 
     .home-3 {
+        .bastami-main-menu ul li:is(.active) a span svg * {
+            fill: white;
+        }
+        .bastami-main-menu ul li:hover a span svg * {
+            fill: white;
+        }
         .bostami-header-wrap {
             background: transparent !important;
         }
@@ -175,13 +195,53 @@
         .bastami-main-menu ul li:hover {
             background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
         }
+        .bostami-parsonal-info-contact-item .icon:hover {
+            background: linear-gradient(97deg, rgb(250, 82, 82) 0%, rgb(221, 36, 118) 100%);
+        }
     }
     .home-1 {
         .bostami-header-wrap {
             background: transparent;
         }
+        .bastami-main-menu ul li.active a span svg * {
+            fill: white;
+        }
+        .bastami-main-menu ul li:hover a span svg * {
+            fill: white;
+        }
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li a:hover {
+            color: #1B74E4;
+        }
+
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li.active a {
+            color: #1B74E4;
+        }
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li.active a span svg * {
+            fill: #1B74E4;
+        }
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li:hover a span svg * {
+            fill: #1B74E4;
+        }
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li:hover a span img {
+            filter: saturate(25);
+        }
+        .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav ul li:is(.active) a span img {
+            filter: saturate(25);
+        }
     }
     .h1-modal-box {
+        .modal-dialog {
+            background-color: #323232;
+            .modal-content {
+                background-color: #323232;
+                .modal-body .h1-modal-comment-box textarea {
+                    background: #000;
+                    color: white;
+                }
+            }
+        }
+    }
+    .portfolio-modal-box {
         .modal-dialog {
             background-color: #323232;
             .modal-content {

@@ -17,6 +17,7 @@
         border-radius: 12px;
         overflow: hidden;
         margin-bottom: 18px;
+        display: block;
         img {
             width: 100%;
             height: 100%;
@@ -302,6 +303,9 @@
             }
         }
     }
+    .blog-slider-single .blog-title:hover {
+        color: #FA5252;
+    }
 }
 
 .home-3 {
@@ -311,5 +315,8 @@
     }
     .blog-slider-wrap .blog-progation span:is(.swiper-pagination-bullet-active) {
         background-color: #F95054;
+    }
+    .blog-slider-single .blog-title:hover {
+        color: #FA5252;
     }
 }
